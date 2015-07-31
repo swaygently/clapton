@@ -1,5 +1,6 @@
 from oslo_log import log
 
+from datetime import datetime
 import flask
 from flask import request
 from flask_restful import Resource, fields, reqparse, marshal_with, abort
@@ -37,7 +38,7 @@ class OrderList(Resource):
 class Order(Resource):
     @marshal_with({'id': fields.String, 'created_at': fields.DateTime, 'links': fields.Nested({'items': fields.Url('items', absolute=True)})})
     def get(self, order_id):
-        return {'id': 123}
+        return {'id': 123, 'created_at': datetime.now(), 'links':[]}
 
     def put(self, order_id):
         LOG.debug(request.form)

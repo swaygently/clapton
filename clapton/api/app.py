@@ -8,9 +8,7 @@ from clapton.api.resources import order
 app = Flask(__name__)
 #app.config['DEBUG'] = cfg.CONF.debug
 with app.app_context():
-    print dir(app)
     api = Api(app, catch_all_404s=True)
-    print current_app
 
     '''
     curl /v1/orders

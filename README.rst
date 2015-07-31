@@ -2,12 +2,13 @@
 clapton
 ===============================
 
-TODO
+Get Start
 
-* Free software: Apache license
-* Documentation: http://docs.openstack.org/developer/clapton
-* Source: http://git.openstack.org/cgit/amazing/clapton
-* Bugs: http://bugs.launchpad.net/clapton
+* virtualenv .tox/venv
+* source .tox/venv/bin/activate
+* python setup.py develop
+* clapton-api --debug
+* curl http://127.0.0.1:5000/v1/orders
 
 Features
 --------
