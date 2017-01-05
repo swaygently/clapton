@@ -1,7 +1,7 @@
-from clapton import bootstrap
+from clapton import service
 from clapton.api.app import app
 
 
 def main():
-    bootstrap.bootstrap()
+    service.prepare_service()
     app.run(debug=True)

@@ -17,6 +17,7 @@ with app.app_context():
     curl -X PUT -d '{}' -H 'Content-Type:application/json' /v1/orders/<order_id>
     curl /v1/orders/<order_id>/items
     '''
+
     api.add_resource(order.OrderList, '/v1/orders')
     api.add_resource(order.Order, '/v1/orders/<string:order_id>')
     api.add_resource(order.OrderItemList, '/v1/orders/<string:order_id>/items')
